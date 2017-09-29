@@ -1,0 +1,27 @@
+{
+  "name": "leetcode-utils",
+  "version": "1.0.0",
+  "description": "javascript utils for leetcode",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzuieliyaoli/leetcode-utils.git"
+  },
+  "keywords": [
+    "leetcode",
+    "javascript",
+    "utils"
+  ],
+  "author": "zzuieliyaoli@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zzuieliyaoli/leetcode-utils/issues"
+  },
+  "homepage": "https://github.com/zzuieliyaoli/leetcode-utils#readme"
+}

@@ -5,6 +5,13 @@ class TreeNode {
   }
 }
 
+class ListNode {
+  constructor(val) {
+    this.val = val;
+    this.next = null;
+  }
+}
+
 function swap(array, a, b) {
   const temp = array[a];
   array[a] = array[b];
@@ -76,6 +83,7 @@ function treeToArray(tree) {
 
 module.exports = {
   TreeNode,
+  ListNode,
   swap,
   getRandomInt,
   arrayToTree,

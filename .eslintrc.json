@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "extends": "airbnb-base",
+  "plugins": [
+    "html"
+  ],
+  "rules": {
+    "no-const-assign": 2,
+    "no-this-before-super": 2,
+    "no-undef": 2,
+    "no-unreachable": 2,
+    "no-unused-vars": 2,
+    "constructor-super": 2,
+    "valid-typeof": 2,
+    "no-param-reassign": 0,
+    "comma-dangle": 2,
+    "semi": ["error", "always"]
+  }
+}

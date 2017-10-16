@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint ./src ./test",
+    "test": "./node_modules/.bin/mocha test/**/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/zzuieliyaoli/leetcode-utils/issues"
   },
-  "homepage": "https://github.com/zzuieliyaoli/leetcode-utils#readme"
+  "homepage": "https://github.com/zzuieliyaoli/leetcode-utils#readme",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.0.1",
+    "eslint-plugin-import": "^2.7.0",
+    "mocha": "^3.5.3"
+  }
 }

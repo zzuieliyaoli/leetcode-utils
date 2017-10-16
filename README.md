@@ -6,7 +6,12 @@
 
 ## Tree
 
+- TreeNode
 - treeToArray
 - arrayToTree
 
+## List
 
+- ListNode
+- listToArray
+- arrayToList

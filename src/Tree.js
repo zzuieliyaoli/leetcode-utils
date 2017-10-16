@@ -1,5 +1,10 @@
 /* eslint no-continue: off */
+
 class TreeNode {
+  /**
+   * Create a tree node
+   * @param {*} val
+   */
   constructor(val) {
     this.val = val;
     this.right = null;
@@ -9,14 +14,14 @@ class TreeNode {
 
 /**
  * @param {number[]} nums
- * @return {TreeNode} tree
+ * @returns {TreeNode} tree
  */
 function arrayToTree(nums) {
   if (nums === null) { return null; }
   if (nums.length === 0) { return null; }
-  const root = new TreeNode(nums[0]);
-  let node = root;
-  for (let i = 1; i < nums.length; i = i + 1) {
+  const tree = new TreeNode(nums[0]);
+  let node = tree;
+  for (let i = 1; i < nums.length; i += 1) {
     const key = (i % 2 === 1) ? 'left' : 'right';
     const num = nums[i];
     if (num !== null) {
@@ -26,24 +31,24 @@ function arrayToTree(nums) {
       node = node.left;
     }
   }
-  return root;
+  return tree;
 }
 
 /**
  * @param {TreeNode} tree
- * @return {number[]} nums
+ * @returns {number[]} array
  */
 function treeToArray(tree) {
-  const result = [];
+  const array = [];
   let node = tree;
   const queue = [node];
   while (queue.length > 0) {
     node = queue.shift();
     if (node === null) {
-      result.push(null);
+      array.push(null);
       continue;
     } else {
-      result.push(node.val);
+      array.push(node.val);
     }
     if ((node.left === null) && (node.right === null)) {
       continue;
@@ -61,7 +66,7 @@ function treeToArray(tree) {
     queue.push(node.left);
     queue.push(node.right);
   }
-  return result;
+  return array;
 }
 
 module.exports = {

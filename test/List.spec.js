@@ -1,9 +1,23 @@
 const { expect } = require('chai');
 const { list } = require('../src');
 
-const { listToArray, arrayToList } = list;
+const { ListNode, listToArray, arrayToList } = list;
 
 describe('List', () => {
+  it('should create ListNode', () => {
+    const a = new ListNode(1);
+    const b = {
+      val: 1,
+      next: null,
+    };
+    expect(a).to.deep.equal(b);
+  });
+
+  it('should handler edge case', () => {
+    expect(arrayToList([])).to.eql(null);
+    expect(listToArray(null)).to.eql([]);
+  });
+
   // TODO FIX
   // Error: FATAL ERROR: invalid array length Allocation failed - JavaScript heap out of memory
   it.skip('should convert array to list', () => {

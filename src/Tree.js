@@ -39,6 +39,7 @@ function arrayToTree(nums) {
  * @returns {number[]} array
  */
 function treeToArray(tree) {
+  if (tree === null) { return []; }
   const array = [];
   let node = tree;
   const queue = [node];

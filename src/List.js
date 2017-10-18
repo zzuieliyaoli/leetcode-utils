@@ -35,11 +35,13 @@ function arrayToList(array) {
  */
 function listToArray(list) {
   const array = [];
-  let node = list;
-  while (node !== null) {
-    array.push(node.val);
-    node = list.next;
+  function rec(node, result) {
+    if (node === null) { return false; }
+    result.push(node.val);
+    rec(node.next, result);
+    return false;
   }
+  rec(list, array);
   return array;
 }
 
